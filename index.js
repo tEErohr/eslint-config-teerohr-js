@@ -76,7 +76,14 @@ module.exports = {
         },
       },
     ],
-    'space-before-function-paren': ['error', 'never'],
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'never',
+        named: 'never',
+        asyncArrow: 'always',
+      },
+    ],
     // allow test libraries to live in devDependencies
     'import/no-extraneous-dependencies': [
       'error',
