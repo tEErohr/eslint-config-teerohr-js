@@ -19,17 +19,17 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
-    'prettier/@typescript-eslint',
     // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors.
     // Make sure this is always the last configuration in the extends array.
     'plugin:prettier/recommended',
   ],
   globals: {},
   rules: {
-    '@typescript-eslint/no-explicit-any': [0, 'never'],
-    '@typescript-eslint/explicit-module-boundary-types': [0, 'never'],
-    '@typescript-eslint/explicit-function-return-type': [0, 'never'],
+    '@typescript-eslint/no-explicit-any': [0, {
+      fixToUnknown: true
+    }],
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+    '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/no-unused-vars': [
       1,
       {
